@@ -1,0 +1,19 @@
+var currentHour = Meta.currentUserTime.hour()
+
+// Change the logic operator from OR to AND to cater for past midnight start
+
+if (currentHour >= 23 || currentHour < 5 ) {
+
+// Run the Actions
+
+} else {
+
+// Skip the Actions - syntax presented in ACTIONS section
+
+PhoneCall.callMyPhone.skip("Alarm Suppressed")
+
+Smartlife.activateScene.skip("Lights Suppressed")
+
+Wyzecam.uploadAlarmVideo.skip("Video Suppressed")
+
+}
